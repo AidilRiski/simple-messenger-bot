@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { addMessage } from '../services/message.service';
 import { getMessageResponse, sendMessage } from '../services/messenger.service';
 
 const get = (req :Request, res :Response) => {
@@ -21,7 +22,8 @@ const post = (req :Request, res :Response) => {
         // If event is of message type.
         if (event.message) {
             const { id } = event.sender;
-            const { text } = event.message;
+            const { mid, text } = event.message;
+            addMessage(mid, id, text);
             const responseMessage = getMessageResponse(text);
             sendMessage(id, responseMessage);
         }
