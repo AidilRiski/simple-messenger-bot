@@ -1,15 +1,14 @@
 import express from 'express';
 import routes from './routes';
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
-
-
-// Dangerous but needed to use TLS IMAP.
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 app.use(cors());
 app.use(morgan('combined'));
