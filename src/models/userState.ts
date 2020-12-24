@@ -3,7 +3,7 @@ import MessageState from './messageState';
 class UserState {
     userID :string
     messageState :MessageState = MessageState.INITIAL
-    expiryTime :Date = new Date(new Date().getTime() + 10 * 1000)
+    expiryTime :Date = new Date(new Date().getTime() + 10 * 60 * 1000)
     name? :string
     birthDate? :Date
 
