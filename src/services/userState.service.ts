@@ -8,8 +8,9 @@ interface UserStateMap {
 const userStates :UserStateMap = {};
 
 const getUserState = (userID :string) => {
-    const userState = userStates[userID] || new UserState(userID);
+    let userState = userStates[userID] || new UserState(userID);
     userStates[userID] = (!userState.isExpired() && userState) || new UserState(userID);
+    userState = userStates[userID];
     return userState;
 };
 
