@@ -1,5 +1,5 @@
 # Simple Facebook Messenger Bot
-A simple bot for **Facebook Messenger** utilizing webhooks.
+A simple bot for **Facebook Messenger** utilizing webhooks. The deployed version of this application is accessible [here](https://simple-facebook-messenger-bot.herokuapp.com) while the bot is accessible [here](https://www.facebook.com/Simple-Bot-103157648372383).
 
 <img src="/docs/images/Simple%20Bot.gif" width=200 />
 
