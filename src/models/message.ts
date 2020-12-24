@@ -1,11 +1,13 @@
 class Message {
     messageID :string
+    timestamp :Date
     senderID :string
     text :string
     deleted :boolean = false
 
-    constructor(messageID :string, senderID :string, text :string) {
+    constructor(messageID :string, timestamp :Date, senderID :string, text :string) {
         this.messageID = messageID;
+        this.timestamp = timestamp;
         this.senderID = senderID;
         this.text = text;
     }

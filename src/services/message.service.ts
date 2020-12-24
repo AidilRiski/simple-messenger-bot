@@ -2,8 +2,8 @@ import Message from '../models/message'
 
 const inMemoryMessages :Message[] = [];
 
-const addMessage = (messageID :string, senderID :string, text :string) => {
-    return inMemoryMessages.push(new Message(messageID, senderID, text)) !== 0;
+const addMessage = (messageID :string, timestamp :Date, senderID :string, text :string) => {
+    return inMemoryMessages.push(new Message(messageID, timestamp, senderID, text)) !== 0;
 };
 
 const getMessage = (messageID :string) => {

@@ -21,9 +21,12 @@ const post = (req :Request, res :Response) => {
 
         // If event is of message type.
         if (event.message) {
-            const { id } = event.sender;
-            const { mid, text } = event.message;
-            addMessage(mid, id, text);
+            const {
+                sender: { id },
+                timestamp,
+                message: { mid, text },
+            } = event;
+            addMessage(mid, new Date(timestamp), id, text);
             const responseMessage = getMessageResponse(id, text);
             sendMessage(id, responseMessage);
         }
