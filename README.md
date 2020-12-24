@@ -1,5 +1,5 @@
 # Simple Facebook Messenger Bot
-A simple bot for Facebook Messenger utilizing webhooks.
+A simple bot for **Facebook Messenger** utilizing webhooks.
 
 <img src="/docs/images/Simple%20Bot.gif" width=200 />
 
@@ -19,7 +19,7 @@ For binary questions (yes or no), this application accepts several responses suc
 1. Set the appropriate environment variables. You can copy the `.ENV.SAMPLE` and rename it into `.env`, then set the variables to the appropriate values.
 1. Start the application by runing `yarn start`.
 1. Make sure that your application is accessible by public. You can use [`NGROK`](https://ngrok.com/) or deploy the application in an environment accessible by public.
-1. Set your Facebook Messenger webhook to this application.
+1. Set your **Facebook Messenger** webhook to this application.
 
 ## Available Endpoints
 This application has several accessible endpoints. All the messages are stored in-memory. Therefore, if the application shuts down, all messages will be deleted.
@@ -27,3 +27,5 @@ This application has several accessible endpoints. All the messages are stored i
 1. [`GET`] `/messages`: Get all messages received by the bot.
 1. [`GET`] `/messages/:id`: Get specific message by message id.
 1. [`DELETE`] `/messages/:id`: Delete a message by id. This will do a soft delete.
+1. [`GET`] `/webhook`: Webhook endpoint for **Facebook Messenger** to verify the application.
+1. [`POST`] `/webhook`: Webhook endpoint for **Facebook Messenger** to notify events from the **Facebook Messenger** conversation.
