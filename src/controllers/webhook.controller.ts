@@ -24,7 +24,7 @@ const post = (req :Request, res :Response) => {
             const { id } = event.sender;
             const { mid, text } = event.message;
             addMessage(mid, id, text);
-            const responseMessage = getMessageResponse(text);
+            const responseMessage = getMessageResponse(id, text);
             sendMessage(id, responseMessage);
         }
     }
