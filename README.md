@@ -1,6 +1,8 @@
 # Simple Facebook Messenger Bot
 A simple bot for Facebook Messenger utilizing webhooks.
 
+<img src="/docs/images/Simple%20Bot.gif" width=200 />
+
 ## Description
 1. When a user sends a message to the bot for the first time, the bot will ask for the user's name.
 1. Then, it will ask the user's birthday (preferably in the format of `YYYY-MM-DD` although other formats of date should be supported too.)
